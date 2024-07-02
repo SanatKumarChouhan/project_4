@@ -24,7 +24,7 @@ import com.rays.pro4.Util.ServletUtility;
 * Marksheet Merit List functionality Controller. Performance operation of
 * Marksheet Merit List
 * 
-*  @author DHARAM THAKUR
+*  @author SANAT KUMAR CHOUHAN
 */
 @WebServlet(name = "MarksheetMeritListCtl", urlPatterns = "/ctl/MarksheetMeritListCtl")
 public class MarksheetMeritListCtl extends BaseCtl{

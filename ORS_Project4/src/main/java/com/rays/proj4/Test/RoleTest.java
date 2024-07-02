@@ -16,7 +16,7 @@ import com.rays.pro4.Model.RoleModel;
 /**
  * Role Model Test classes.
  * 
- * @author DHARAM THAKUR
+ * @author SANAT KUMAR CHOUHAN
  *
  */
 public class RoleTest {

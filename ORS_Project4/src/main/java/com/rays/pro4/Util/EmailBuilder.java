@@ -4,7 +4,7 @@ import java.util.HashMap;
 /**
  *  Class that build Application Email messages.
  *  
- * @author DHARAM THAKUR
+ * @author SANAT KUMAR CHOUHAN
  *
  */
 public class EmailBuilder {

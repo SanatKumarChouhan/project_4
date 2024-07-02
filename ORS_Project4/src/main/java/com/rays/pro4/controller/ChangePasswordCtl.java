@@ -25,7 +25,7 @@ import com.rays.pro4.Util.ServletUtility;
 /**
 * The Class ChangePasswordCtl.
 * 
-* @author DHARAM THAKUR
+* @author SANAT KUMAR CHOUHAN
 */
 @WebServlet(name = "ChangePasswordCtl", urlPatterns = { "/ctl/ChangePasswordCtl" })
 public class ChangePasswordCtl extends BaseCtl{

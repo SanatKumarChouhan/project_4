@@ -3,7 +3,7 @@
 /**
  * Role JavaBean encapsulates Role attributes.
  * 
- * @author DHARAM THAKUR
+ * @author SANAT KUMAR CHOUHAN
  *
  */
 public class RoleBean extends BaseBean{

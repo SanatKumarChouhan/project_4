@@ -3,7 +3,7 @@ package com.rays.pro4.Util;
 /**
  * Contains Email Message.
  * 
- * @author DHARAM THAKUR
+ * @author SANAT KUMAR CHOUHAN
  *
  */
 

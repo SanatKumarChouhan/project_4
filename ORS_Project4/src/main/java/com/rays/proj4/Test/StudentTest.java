@@ -15,7 +15,7 @@ import com.rays.pro4.Model.StudentModel;
 
 /**
  * Student  Model Test classes.
- * @author DHARAM THAKUR
+ * @author SANAT KUMAR CHOUHAN
  *
  */
 public class StudentTest {

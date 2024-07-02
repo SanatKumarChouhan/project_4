@@ -2,7 +2,7 @@ package com.rays.pro4.Model;
 /**
  * The Interface AppRole.
  * 
- * @author DHARAM THAKUR
+ * @author SANAT KUMAR CHOUHAN
  *
  */
 public interface AppRole {

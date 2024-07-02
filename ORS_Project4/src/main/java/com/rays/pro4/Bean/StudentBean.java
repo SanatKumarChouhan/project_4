@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Student JavaBean encapsulates Student attributes.
  * 
- * @author DHARAM THAKUR
+ * @author SANAT KUMAR CHOUHAN
  *
  */
 public class StudentBean extends BaseBean {
