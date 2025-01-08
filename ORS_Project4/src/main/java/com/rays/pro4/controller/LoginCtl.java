@@ -1,4 +1,4 @@
- package com.rays.pro4.controller;
+package com.rays.pro4.controller;
 
 import java.io.IOException;
 
@@ -68,7 +68,7 @@ public class LoginCtl extends BaseCtl {
 			System.out.println("loginctl me is Pass Null condition");
 			request.setAttribute("password", PropertyReader.getValue("error.require", "Password"));
 			pass = false;
-		} 
+		}
 		System.out.println("LoginCtl Method validate Ended");
 		log.debug("LoginCtl Method validate Ended");
 		return pass;
@@ -158,15 +158,15 @@ public class LoginCtl extends BaseCtl {
 
 					if (rolebean != null) {
 						session.setAttribute("role", rolebean.getName());
-					}  
- 
+					}
+
 					if ("null".equalsIgnoreCase(uri)) {
 						ServletUtility.redirect(ORSView.WELCOME_CTL, request, response);
 						return;
 					} else {
 						ServletUtility.redirect(uri, request, response);
 						return;
-					} 
+					}
 
 				} else {
 					System.out.println(" Loginctl Ki Do post 22");

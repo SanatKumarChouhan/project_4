@@ -47,7 +47,6 @@ public class UserListCtl extends BaseCtl {
 		try {
 			List rlist = rmodel.list(0, 0);
 			List ulist = umodel.list(0, 0);
-			
 
 			request.setAttribute("RoleList", rlist);
 			request.setAttribute("LoginId", ulist);
@@ -63,17 +62,19 @@ public class UserListCtl extends BaseCtl {
 	 * @see in.co.rays.ors.controller.BaseCtl#populateBean(javax.servlet.http.
 	 * HttpServletRequest)
 	 */
+	/**
+	 *
+	 */
 	@Override
 	protected BaseBean populateBean(HttpServletRequest request) {
 		UserBean bean = new UserBean();
 
-		
-	//	bean.setId(DataUtility.getLong(request.getParameter("id")));
+		bean.setId(DataUtility.getLong(request.getParameter("id")));
 		bean.setFirstName(DataUtility.getString(request.getParameter("firstName")));
 //   bean.setLastName(DataUtility.getString(request.getParameter("LastName")));
 		bean.setRoleId(DataUtility.getLong(request.getParameter("roleid")));
 		bean.setLogin(DataUtility.getString(request.getParameter("loginid")));
-//		bean.setDob(DataUtility.getDate(request.getParameter("dob")));
+		bean.setDob(DataUtility.getDate(request.getParameter("dob")));
 
 		return bean;
 	}
@@ -94,14 +95,14 @@ public class UserListCtl extends BaseCtl {
 
 		int pageNo = 1;
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
- 
+
 		UserBean bean = (UserBean) populateBean(request);
 		String op = DataUtility.getString(request.getParameter("operation"));
 
 //	        get the selected checkbox ids array for delete list
 
 		// String[] ids = request.getParameterValues("ids");
-	
+
 		UserModel model = new UserModel();
 
 		try {
@@ -113,10 +114,11 @@ public class UserListCtl extends BaseCtl {
 			request.setAttribute("nextlist", nextList.size());
 
 			ServletUtility.setList(list, request);
-			
-			  if (list == null || list.size() == 0) {
-			  ServletUtility.setErrorMessage("No record found ", request); }
-			 
+
+			if (list == null || list.size() == 0) {
+				ServletUtility.setErrorMessage("No record found ", request);
+			}
+
 			ServletUtility.setList(list, request);
 			ServletUtility.setPageNo(pageNo, request);
 			ServletUtility.setPageSize(pageSize, request);
@@ -145,25 +147,25 @@ public class UserListCtl extends BaseCtl {
 
 		List list;
 		List nextList = null;
-		
+
 		int pageNo = DataUtility.getInt(request.getParameter("pageNo"));
 		int pageSize = DataUtility.getInt(request.getParameter("pageSize"));
 		pageNo = (pageNo == 0) ? 1 : pageNo;
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader.getValue("page.size")) : pageSize;
 
 		String op = DataUtility.getString(request.getParameter("operation"));
-		
+
 		UserBean bean = (UserBean) populateBean(request);
-		
+
 		// get the selected checkbox ids array for delete list
-		
+
 		String[] ids = request.getParameterValues("ids");
-		
+
 		UserModel model = new UserModel();
- 
+
 		if (OP_SEARCH.equalsIgnoreCase(op)) {
 			pageNo = 1;
-		} else if (OP_NEXT.equalsIgnoreCase(op)) {  
+		} else if (OP_NEXT.equalsIgnoreCase(op)) {
 			pageNo++;
 		} else if (OP_PREVIOUS.equalsIgnoreCase(op) && pageNo > 1) {
 			pageNo--;
@@ -193,7 +195,7 @@ public class UserListCtl extends BaseCtl {
 				ServletUtility.setErrorMessage("Select at least one record", request);
 			}
 		}
-		try { 
+		try {
 
 			list = model.search(bean, pageNo, pageSize);
 
@@ -207,7 +209,7 @@ public class UserListCtl extends BaseCtl {
 			return;
 		}
 		if (list == null || list.size() == 0 && !OP_DELETE.equalsIgnoreCase(op)) {
-	 	ServletUtility.setErrorMessage("No record found ", request);
+			ServletUtility.setErrorMessage("No record found ", request);
 		}
 		ServletUtility.setList(list, request);
 		ServletUtility.setBean(bean, request);

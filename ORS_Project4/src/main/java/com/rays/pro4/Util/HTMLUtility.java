@@ -1,7 +1,6 @@
- package com.rays.pro4.Util;
+package com.rays.pro4.Util;
 
 import java.util.Collections;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -22,7 +21,7 @@ public class HTMLUtility {
 	public static String getList(String name, String selectedVal, HashMap<String, String> map) {
 
 		StringBuffer sb = new StringBuffer(
-				"<select style='width: 203px;  height: 23px;' class='form-control' name='" + name + "'>");
+				"<select style='width: 215px;  height: 23px;' class='form-control' name='" + name + "'>");
 
 		Set<String> keys = map.keySet();
 		String val = null;
@@ -57,7 +56,7 @@ public class HTMLUtility {
 
 		Collections.sort(list);
 		StringBuffer sb = new StringBuffer(
-				"<select style='width: 203px;  height: 23px;' class='form-control' name='" + name + "'>");
+				"<select style='width: 215px;  height: 23px;' class='form-control' name='" + name + "'>");
 
 		boolean select = true;
 		if (select) {
@@ -77,15 +76,16 @@ public class HTMLUtility {
 		for (DropdownListBean obj : dd) {
 			key = obj.getkey();
 			val = obj.getValue();
-			
+
 			if (key.trim().equals(selectedVal)) {
 				sb.append("<option selected value='" + key + "'>" + val + "</option>");
 			} else {
 				sb.append("<option value='" + key.trim() + "'>" + val + "</option>");
 			}
 		}
+
 		sb.append("</select>");
-		
+
 		return sb.toString();
 	}
 

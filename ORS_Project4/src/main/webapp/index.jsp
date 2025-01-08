@@ -15,16 +15,17 @@
 	href="<%=ORSView.APP_CONTEXT%>/img/logo.png" sizes="16x16" />
 </head>
 <body>
-<!-- <style >
+	<!-- <style >
 a{text-decoration: none;}
 
 
 </style> -->
 
 	<br>
-	<br><br>
 	<br>
-<br>
+	<br>
+	<br>
+	<br>
 	<%
 		UserBean userBean = (UserBean) session.getAttribute("user");
 
@@ -46,12 +47,13 @@ a{text-decoration: none;}
 	<br>
 
 	<h1 align="center">
-	
-		<font size="10px" color="red"> <a
-			href="<%=ORSView.WELCOME_CTL %>" >Online Result System</a></font>
-			
-	<!-- style="text-decoration:none" -->
-	 
-			</h1>
+
+		<font size="10px" style="color: red;" >
+		<a href="<%=ORSView.WELCOME_CTL%>">Online Result System</a>
+		</font>
+
+		<!-- style="text-decoration:none" style="color: red" -->
+
+	</h1>
 </body>
 </html>

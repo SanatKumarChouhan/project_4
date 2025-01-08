@@ -486,7 +486,7 @@ public class UserModel {
 	public List list(int pageNo, int pageSize) throws ApplicationException {
 		log.debug("Model list Started");
 		ArrayList list = new ArrayList();
-		StringBuffer sql = new StringBuffer("select * from ST_USER");
+		StringBuffer sql = new StringBuffer("select * from ST_USER where 1=1");
 
 		if (pageSize > 0) {
 			pageNo = (pageNo - 1) * pageSize;

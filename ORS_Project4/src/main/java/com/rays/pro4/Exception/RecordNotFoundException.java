@@ -1,4 +1,5 @@
 package com.rays.pro4.Exception;
+
 /**
  * RecordNotFoundException thrown when a record not found occurred.
  * 
@@ -6,7 +7,7 @@ package com.rays.pro4.Exception;
  * 
  */
 public class RecordNotFoundException extends Exception {
-	public RecordNotFoundException(String msg){
+	public RecordNotFoundException(String msg) {
 		super(msg);
 	}
 }

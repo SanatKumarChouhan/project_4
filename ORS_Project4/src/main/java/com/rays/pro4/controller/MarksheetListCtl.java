@@ -91,6 +91,7 @@ public class MarksheetListCtl extends BaseCtl {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		System.out.println("myTesting1");
 		List nextList = null;
 
 		int pageNo = 1;
@@ -101,7 +102,7 @@ public class MarksheetListCtl extends BaseCtl {
 
 		MarksheetBean bean = (MarksheetBean) populateBean(request);
 		String[] ids = request.getParameterValues("ids");
-		List list;
+		List list = null;
 		MarksheetModel model = new MarksheetModel();
 		try {
 			list = model.search(bean, pageNo, pageSize);
