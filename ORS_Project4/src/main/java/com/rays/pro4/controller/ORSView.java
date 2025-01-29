@@ -42,6 +42,9 @@ public interface ORSView {
 	public String CART_LIST_VIEW = PAGE_FOLDER + "/CartListView.jsp";
 	public String CART_VIEW = PAGE_FOLDER + "/CartView.jsp";
 
+	public String ITEM_LIST_VIEW = PAGE_FOLDER + "/ItemListView.jsp";
+	public String ITEM_VIEW = PAGE_FOLDER + "/ItemView.jsp";
+
 	public String MARKSHEET_CTL = APP_CONTEXT + "/ctl/MarksheetCtl";
 	public String MARKSHEET_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetListCtl";
 	public String USER_CTL = APP_CONTEXT + "/ctl/UserCtl";
@@ -72,5 +75,8 @@ public interface ORSView {
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 	public String CART_LIST_CTL = APP_CONTEXT + "/ctl/CartListCtl";
 	public String CART_CTL = APP_CONTEXT + "/ctl/CartCtl";
+
+	public String ITEM_LIST_CTL = APP_CONTEXT + "/ctl/ItemListCtl";
+	public String ITEM_CTL = APP_CONTEXT + "/ctl/ItemCtl";
 
 }

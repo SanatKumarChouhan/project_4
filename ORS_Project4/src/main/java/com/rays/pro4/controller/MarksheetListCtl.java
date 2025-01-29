@@ -3,7 +3,6 @@ package com.rays.pro4.controller;
 import java.io.IOException;
 import java.util.List;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,9 +32,10 @@ import com.rays.pro4.Util.ServletUtility;
 */
 
 /**
-* Servlet implementation class MarksheetlistCtl
-*  @author  SANAT KUMAR CHOUHAN
-*/
+ * Servlet implementation class MarksheetlistCtl
+ * 
+ * @author SANAT KUMAR CHOUHAN
+ */
 @WebServlet(name = "MarksheetListCtl", urlPatterns = { "/ctl/MarksheetListCtl" })
 public class MarksheetListCtl extends BaseCtl {
 
@@ -50,11 +50,11 @@ public class MarksheetListCtl extends BaseCtl {
 	 */
 	@Override
 	protected void preload(HttpServletRequest request) {
-		MarksheetModel model= new  MarksheetModel();
+		MarksheetModel model = new MarksheetModel();
 		CollegeModel cmodel = new CollegeModel();
 		try {
 			List list = model.list(0, 0);
-			List clist = cmodel.list(0,0);
+			List clist = cmodel.list(0, 0);
 			request.setAttribute("rollNo", list);
 			request.setAttribute("Collegelist", clist);
 		} catch (ApplicationException e) {
@@ -73,7 +73,7 @@ public class MarksheetListCtl extends BaseCtl {
 		MarksheetBean bean = new MarksheetBean();
 
 		bean.setId(DataUtility.getLong(request.getParameter("rollNo123")));
-	    bean.setRollNo(DataUtility.getString(request.getParameter("rollNo")));
+		bean.setRollNo(DataUtility.getString(request.getParameter("rollNo")));
 		bean.setName(DataUtility.getString(request.getParameter("name")));
 		bean.setTotal(DataUtility.getInt(request.getParameter("total")));
 
@@ -92,6 +92,7 @@ public class MarksheetListCtl extends BaseCtl {
 			throws ServletException, IOException {
 
 		System.out.println("myTesting1");
+		List list = null;
 		List nextList = null;
 
 		int pageNo = 1;
@@ -102,7 +103,7 @@ public class MarksheetListCtl extends BaseCtl {
 
 		MarksheetBean bean = (MarksheetBean) populateBean(request);
 		String[] ids = request.getParameterValues("ids");
-		List list = null;
+
 		MarksheetModel model = new MarksheetModel();
 		try {
 			list = model.search(bean, pageNo, pageSize);
@@ -143,22 +144,20 @@ public class MarksheetListCtl extends BaseCtl {
 		log.debug("MarksheetListCtl doPost Start");
 
 		List list = null;
-
 		List nextList = null;
+
 		String op = DataUtility.getString(request.getParameter("operation"));
+		String[] ids = request.getParameterValues("ids");
 
 		int pageNo = DataUtility.getInt(request.getParameter("pageNo"));
 		int pageSize = DataUtility.getInt(request.getParameter("pageSize"));
 
 		pageNo = (pageNo == 0) ? 1 : pageNo;
-
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader.getValue("page.size")) : pageSize;
 
 		MarksheetBean bean = (MarksheetBean) populateBean(request);
 
 		// get the selected checkbox ids array for delete list
-		String[] ids = request.getParameterValues("ids");
-
 		MarksheetModel model = new MarksheetModel();
 
 		if (OP_SEARCH.equalsIgnoreCase(op)) {

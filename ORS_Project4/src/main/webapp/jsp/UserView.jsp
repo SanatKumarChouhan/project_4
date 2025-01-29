@@ -30,6 +30,7 @@
 		});
 	});
 </script>
+</head>
 <body>
 	<jsp:useBean id="bean" class="com.rays.pro4.Bean.UserBean"
 		scope="request"></jsp:useBean>
@@ -60,7 +61,7 @@
 						<th><font size="5px"> Add User </font></th>
 					</tr>
 					<%
-					}
+						}
 					%>
 				</h1>
 
@@ -113,7 +114,7 @@
 					<td><input type="text" name="login"
 						placeholder="Enter EmailId" size="25"
 						value="<%=DataUtility.getStringData(bean.getLogin())%>"
-						<%=(bean.getId() > 0) ? "readonly" : ""%>></td>
+						<%=(bean.getId() > 0) ? "" : ""%>></td>
 					<td style="position: fixed"><font color="red"> <%=ServletUtility.getErrorMessage("login", request)%></font></td>
 				</tr>
 
@@ -209,8 +210,8 @@
 				<tr>
 					<th align="left">Mobile No <span style="color: red">*</span> :
 					</th>
-					<td><input type="text" name="mobileNo"
-						maxlength="10" placeholder="Enter Mobile No" size="25"
+					<td><input type="text" name="mobileNo" maxlength="10"
+						placeholder="Enter Mobile No" size="25"
 						value="<%=DataUtility.getStringData(bean.getMobileNo())%>"></td>
 					<td style="position: fixed"><font color="red"> <%=ServletUtility.getErrorMessage("mobileNo", request)%></font></td>
 				</tr>

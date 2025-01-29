@@ -600,6 +600,7 @@ public class UserModel {
 	}
 
 	public boolean forgetPassword(String login) throws ApplicationException, RecordNotFoundException {
+		
 		UserBean userData = findByLogin(login);
 		boolean flag = false;
 

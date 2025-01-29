@@ -92,9 +92,10 @@
 						&emsp; <label>Role</font> :
 					</label> <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist)%>
 						&nbsp;<!--  <label>DOB</font> :
-					</label> --><%--  <%=HTMLUtility.getList("dob", String.valueOf(bean.getId()), ulist)%> --%>
-						
-						 <%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
+					</label> -->
+						<%--  <%=HTMLUtility.getList("dob", String.valueOf(bean.getId()), ulist)%> --%>
+
+						<%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
 						
  --%> <%-- 
    <label>LastName</label>

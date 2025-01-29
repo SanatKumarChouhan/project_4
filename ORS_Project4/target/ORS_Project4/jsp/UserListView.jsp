@@ -13,12 +13,12 @@
 <link rel="icon" type="image/png"
 	href="<%=ORSView.APP_CONTEXT%>/img/logo.png" sizes="16*16" />
 <title>User List</title>
- 
+
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 <script src="<%=ORSView.APP_CONTEXT%>/js/Checkbox11.js"></script>
 
 
-<link rel="stylesheet" 
+<link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -46,7 +46,7 @@
 		<center>
 
 			<div align="center">
-				<h1 >User List</h1>
+				<h1>User List</h1>
 				<h3>
 					<font color="red"><%=ServletUtility.getErrorMessage(request)%></font>
 					<font color="green"><%=ServletUtility.getSuccessMessage(request)%></font>
@@ -59,9 +59,9 @@
 
 				List ulist = (List) request.getAttribute("LoginId");
 
-				int next = DataUtility.getInt(request.getAttribute("nextlist") .toString());
+				int next = DataUtility.getInt(request.getAttribute("nextlist").toString());
 			%>
- 
+
 
 			<%
 				int pageNo = ServletUtility.getPageNo(request);
@@ -76,7 +76,10 @@
 			<table width="100%" align="center">
 				<tr>
 					<th></th>
-					
+
+
+
+
 					<td align="center"><label>FirstName</font> :
 					</label> <input type="text" name="firstName" placeholder="Enter First Name"
 						value="<%=ServletUtility.getParameter("firstName", request)%>">
@@ -88,26 +91,26 @@
 						value="<%=ServletUtility.getParameter("login", request)%>">
 						&emsp; <label>Role</font> :
 					</label> <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist)%>
-						&nbsp; <%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
+						&nbsp;<!--  <label>DOB</font> :
+					</label> -->
+						<%--  <%=HTMLUtility.getList("dob", String.valueOf(bean.getId()), ulist)%> --%>
+
+						<%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
 						
- --%>
- <%-- 
+ --%> <%-- 
    <label>LastName</label>
    <input type="text" name="LastName" value<%= ServletUtility.getParameter("LastName", request) %>>  
   &nbsp; <%=HTMLUtility.getList("lastName", String.valueOf(bean.getRoleId()), ulist )%> &nbsp; --%>
- 
-  <%--  <label>DOB</font> :
+
+						<%--  <label>DOB</font> :
 					</label> <input type="text" name="dob" placeholder="Enter dob" id="udatee"
 						readonly="readonly"
 						value="<%=ServletUtility.getParameter("dob", request)%>">
  
-  --%>
-
-
-						<input type="submit" name="operation"
+  --%> <input type="submit" name="operation"
 						value="<%=UserListCtl.OP_SEARCH%>"> &nbsp; <input
 						type="submit" name="operation" value="<%=UserListCtl.OP_RESET%>">
- 
+
 					</td>
 				</tr>
 			</table>
@@ -137,8 +140,8 @@
 							RoleBean rolebean = new RoleBean();
 							rolebean = model.findByPK(bean.getRoleId());
 				%>
-               
-               
+
+
 
 				<tr align="center">
 					<td><input type="checkbox" class="checkbox" name="ids"

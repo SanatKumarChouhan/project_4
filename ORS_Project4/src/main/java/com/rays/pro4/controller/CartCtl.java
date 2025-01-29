@@ -92,7 +92,7 @@ public class CartCtl extends BaseCtl {
 		bean.setId(DataUtility.getInt(request.getParameter("id")));
 		bean.setName(DataUtility.getString(request.getParameter("name")));
 		bean.setProduct(DataUtility.getString(request.getParameter("product")));
-		bean.setTransactionDate(DataUtility.getDate(request.getParameter("tdate")));
+		bean.setTransactionDate(DataUtility.getDate(request.getParameter("tDate")));
 		System.out.println("cart ctl par tdate get hui>>>>" + bean.getTransactionDate());
 		bean.setQuantity(DataUtility.getInt(request.getParameter("quantity")));
 

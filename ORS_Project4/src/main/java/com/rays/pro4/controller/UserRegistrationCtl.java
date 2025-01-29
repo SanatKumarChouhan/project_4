@@ -210,6 +210,7 @@ public class UserRegistrationCtl extends BaseCtl {
 				System.out.println("UserRegistrationCtl Method doPost Error Msg And Forward ");
 				ServletUtility.setErrorMessage("Login Id Already Exists", request);
 				ServletUtility.forward(getView(), request, response);
+				return;
 			}
 		} else if (OP_RESET.equalsIgnoreCase(op)) {
 			System.out.println("UserRegistrationCtl Method doPost Operation Reset Mila Redirect UserRegCtl");

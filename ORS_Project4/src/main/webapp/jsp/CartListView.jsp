@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png"
 	href="<%=ORSView.APP_CONTEXT%>/img/logo.png" sizes="16*16" />
 <meta charset="ISO-8859-1">
-<title>CartList</title>
+<title>CartListView</title>
 
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 <script src="<%=ORSView.APP_CONTEXT%>/js/Checkbox11.js"></script>
@@ -76,15 +76,15 @@
 
 
 
-						<td align="center"><label>FirstName</font> :
+						<td align="center"><label>Name</font> :
 						</label> <input type="text" name="name" placeholder="Enter Name"
 							value="<%=ServletUtility.getParameter("name", request)%>">
 
-							<label></font> </label> <label>Name</font> :
-						</label> <%-- <%=HTMLUtility.getList("cname", bean.getId(), clist)%> --%>
+							<label></font> </label> <!-- <label>Name</font> :
+						</label> --> <%-- <%=HTMLUtility.getList("cname", bean.getId(), clist)%> --%>
 
 
-							--%> <input type="submit" name="operation"
+							<input type="submit" name="operation"
 							value="<%=CartListCtl.OP_SEARCH%>"> &nbsp; <input
 							type="submit" name="operation" value="<%=CartListCtl.OP_RESET%>">
 

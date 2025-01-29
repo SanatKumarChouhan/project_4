@@ -117,8 +117,9 @@ public class CartModel {
 		Connection conn = null;
 		try {
 			conn = JDBCDataSource.getConnection();
-
 			conn.setAutoCommit(false);
+
+
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 
 			pstmt.setString(1, bean.getName());
@@ -136,8 +137,8 @@ public class CartModel {
 			pstmt.close();
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			try {
-				e.printStackTrace();
 				conn.rollback();
 			} catch (Exception e2) {
 				throw new ApplicationException("exception in updation card");
@@ -173,7 +174,7 @@ public class CartModel {
 			if (pageSize > 0) {
 
 				pageNo = (pageNo - 1) * pageSize;
-				sql.append(" and limit " + pageNo + ", " + pageSize);
+				sql.append(" limit " + pageNo + ", " + pageSize);
 			}
 		}
 
