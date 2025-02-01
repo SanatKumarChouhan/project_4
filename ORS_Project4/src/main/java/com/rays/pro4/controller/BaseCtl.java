@@ -1,4 +1,4 @@
- package com.rays.pro4.controller;
+package com.rays.pro4.controller;
 
 import java.io.IOException;
 
@@ -36,7 +36,7 @@ public abstract class BaseCtl extends HttpServlet {
 	public static final String OP_BACK = "Back";
 	public static final String OP_LOG_OUT = "Logout";
 	public static final String OP_RESET = "Reset";
-	public static final String OP_UPDATE = "Update"; 
+	public static final String OP_UPDATE = "Update";
 
 	/**
 	 * Success message key constant
@@ -52,7 +52,7 @@ public abstract class BaseCtl extends HttpServlet {
 	 * Validates input data entered by User
 	 *
 	 * @param request
-	 * @return 
+	 * @return
 	 */
 	protected boolean validate(HttpServletRequest request) {
 		return true;
@@ -132,7 +132,7 @@ public abstract class BaseCtl extends HttpServlet {
 		preload(request);
 
 		String op = DataUtility.getString(request.getParameter("operation"));
-		System.out.println("Bctl Mai Operation Get Kiya = " +" "+ op);
+		System.out.println("Bctl Mai Operation Get Kiya = " + " " + op);
 		// Check if operation is not DELETE, VIEW, CANCEL, RESET and NULL then
 		// perform input data validation
 
@@ -144,7 +144,7 @@ public abstract class BaseCtl extends HttpServlet {
 			if (!validate(request)) {
 				System.out.println("Bctl Me validation Perform Hua ");
 
-			BaseBean bean = (BaseBean) populateBean(request);
+				BaseBean bean = (BaseBean) populateBean(request);
 
 				// wapis se inserted data dikhe jo phle in put kiya tha
 

@@ -84,8 +84,10 @@
 					href="<%=ORSView.CART_LIST_CTL%>">Cart List</a>|<a
 					href="<%=ORSView.CART_CTL%>">Add Cart</a>| <a
 					href="<%=ORSView.ITEM_LIST_CTL%>">Item List </a>| <a
-					href="<%=ORSView.ITEM_CTL%>">Add Item</a>| <a target="blank"
-					href="<%=ORSView.JAVA_DOC_VIEW%>">Java Doc</a> <%
+					href="<%=ORSView.ITEM_CTL%>">Add Item</a>| <a
+					href="<%=ORSView.PURCHASE_LIST_CTL%>">Purchase List </a>| <a
+					href="<%=ORSView.PURCHASE_CTL%>">Add Purchase</a>| <a
+					target="blank" href="<%=ORSView.JAVA_DOC_VIEW%>">Java Doc</a> <%
  	}
  %> <%
  	if (userBean.getRoleId() == RoleBean.STUDENT) {

@@ -53,7 +53,7 @@
 				</h3>
 
 				<%
-					List clist = (List) request.getAttribute("clist");
+					/* List clist = (List) request.getAttribute("clist"); */
 
 					int next = DataUtility.getInt(request.getAttribute("nextList").toString());
 				%>

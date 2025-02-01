@@ -119,7 +119,6 @@ public class CartModel {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false);
 
-
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 
 			pstmt.setString(1, bean.getName());
@@ -155,14 +154,14 @@ public class CartModel {
 		if (bean != null) {
 
 			if (bean.getName() != null && bean.getName().length() > 0) {
-				sql.append(" and name like '" + bean.getName() + "'%");
+				sql.append(" and name like '" + bean.getName() + "%'");
 			}
 			if (bean.getProduct() != null && bean.getProduct().length() > 0) {
-				sql.append(" and product like '" + bean.getProduct() + "'%");
+				sql.append(" and product like '" + bean.getProduct() + "%'");
 			}
 			if (bean.getTransactionDate() != null && bean.getTransactionDate().getTime() > 0) {
 				Date d = new java.sql.Date(bean.getTransactionDate().getTime());
-				sql.append(" and transaction_date '" + d + "'%");
+				sql.append(" and tansaction_date like '" + d + "%'");
 			}
 			if (bean.getQuantity() > 0) {
 				sql.append(" and quantity =" + bean.getQuantity());
@@ -196,10 +195,7 @@ public class CartModel {
 				bean.setProduct(rs.getString(3));
 				bean.setTransactionDate(rs.getDate(4));
 				bean.setQuantity(rs.getInt(5));
-				bean.setCreatedBy(rs.getString(6));
-				bean.setModifiedBy(rs.getString(7));
-				bean.setCreatedDatetime(rs.getTimestamp(8));
-				bean.setModifiedDatetime(rs.getTimestamp(9));
+			
 
 				list.add(bean);
 			}
@@ -232,10 +228,7 @@ public class CartModel {
 				bean.setProduct(rs.getString(3));
 				bean.setTransactionDate(rs.getDate(4));
 				bean.setQuantity(rs.getInt(5));
-				bean.setCreatedBy(rs.getString(6));
-				bean.setModifiedBy(rs.getString(7));
-				bean.setCreatedDatetime(rs.getTimestamp(8));
-				bean.setModifiedDatetime(rs.getTimestamp(9));
+				
 
 			}
 			rs.close();

@@ -7,6 +7,7 @@ com\rays\pro4\Bean\MarksheetBean.class
 com\rays\pro4\Bean\SubjectBean.class
 com\rays\pro4\Model\CourseModel.class
 com\rays\pro4\Model\AppRole.class
+com\rays\pro4\Model\PurchaseModel.class
 com\rays\pro4\Util\DataValidator.class
 com\rays\pro4\Util\EmailUtility$1.class
 com\rays\pro4\Bean\FacultyBean.class
@@ -51,8 +52,10 @@ com\rays\pro4\controller\TimetableCtl.class
 com\rays\pro4\controller\SubjectCtl.class
 com\rays\pro4\Model\StudentModel.class
 com\rays\pro4\controller\CartListCtl.class
+com\rays\pro4\controller\PurchaseCtl.class
 com\rays\pro4\controller\UserCtl.class
 com\rays\proj4\Test\CartModelTest.class
+com\rays\pro4\Bean\PurchaseBean.class
 com\rays\pro4\Bean\RoleBean.class
 com\rays\proj4\Test\StudentTest.class
 com\rays\pro4\Exception\DatabaseException.class
@@ -63,6 +66,7 @@ com\rays\proj4\Test\UserTest.class
 com\rays\pro4\controller\MyProfileCtl.class
 com\rays\pro4\controller\RoleCtl.class
 com\rays\pro4\Bean\StudentBean.class
+com\rays\pro4\controller\PurchaseListCtl.class
 com\rays\pro4\controller\StudentCtl.class
 com\rays\pro4\controller\GetMarksheetCtl.class
 com\rays\pro4\Model\SubjectModel.class

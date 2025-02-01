@@ -39,6 +39,7 @@ E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Bean\UserBean.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\proj4\Test\RoleTest.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\CollegeCtl.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\MarksheetMeritListCtl.java
+E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Bean\PurchaseBean.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Util\EmailUtility.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Bean\RoleBean.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\ForgetPasswordCtl.java
@@ -63,6 +64,7 @@ E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Util\EmailMessage.ja
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Model\UserModel.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\proj4\Test\SubjectTest.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\ItemListCtl.java
+E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\PurchaseListCtl.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Bean\BaseBean.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\MarksheetListCtl.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\proj4\Test\MarksheetTest.java
@@ -74,6 +76,8 @@ E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Bean\SubjectBean.jav
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\proj4\Test\FacultyTest.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Model\FacultyModel.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Util\DataUtility.java
+E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Model\PurchaseModel.java
+E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\PurchaseCtl.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\Model\AppRole.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\FacultyCtl.java
 E:\pro_4_workspace\ORS_Project4\src\main\java\com\rays\pro4\controller\WelcomeCtl.java
