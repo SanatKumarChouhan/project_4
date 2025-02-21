@@ -67,10 +67,20 @@ public class MarksheetBean extends BaseBean{
 		// TODO Auto-generated method stub
 		return id+"";
 	}
+//	@Override
+//	public String getValue() {
+//		// TODO Auto-generated method stub
+//		return rollNo;
+//	}
+	@Override
+	public String getValue(String val) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return rollNo;
+		return null;
 	}
 	
 	

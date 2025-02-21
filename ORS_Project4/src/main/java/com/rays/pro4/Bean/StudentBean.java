@@ -69,5 +69,10 @@ public class StudentBean extends BaseBean {
 	public String getValue() {
 		return firstName + " "+lastName;
 	}
+	@Override
+	public String getValue(String val) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

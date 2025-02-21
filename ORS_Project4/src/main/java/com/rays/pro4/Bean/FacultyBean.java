@@ -106,5 +106,10 @@ public class FacultyBean extends BaseBean{
 		// TODO Auto-generated method stub
 		return firstName + " " + lastName;
 	}
+	@Override
+	public String getValue(String val) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

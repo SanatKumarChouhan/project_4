@@ -89,11 +89,12 @@
 						<label>LoginId</font> :
 					</label> <input type="text" name="loginid" placeholder="Enter Login-Id"
 						value="<%=ServletUtility.getParameter("login", request)%>">
-						&emsp; <label>Role</font> :
-					</label> <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist)%>
-						&nbsp;<!--  <label>DOB</font> :
-					</label> -->
-						<%--  <%=HTMLUtility.getList("dob", String.valueOf(bean.getId()), ulist)%> --%>
+						&emsp; <%-- <label>Role</font> :
+					</label> <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist)%> --%>
+						&nbsp; <label>DOB</font> :
+					</label> <%=HTMLUtility.getList("dob", String.valueOf(bean.getId()), ulist)%>
+						<label>first name</font> :
+					</label> <%=HTMLUtility.getList("firstName", String.valueOf(bean.getId()), ulist)%>
 
 						<%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
 						
@@ -102,16 +103,13 @@
    <input type="text" name="LastName" value<%= ServletUtility.getParameter("LastName", request) %>>  
   &nbsp; <%=HTMLUtility.getList("lastName", String.valueOf(bean.getRoleId()), ulist )%> &nbsp; --%>
 
-						<%--  <label>DOB</font> :
+						<%-- <label>DOB</font> :
 					</label> <input type="text" name="dob" placeholder="Enter dob" id="udatee"
 						readonly="readonly"
-						value="<%=ServletUtility.getParameter("dob", request)%>">
- 
-  --%> <input type="submit" name="operation"
-						value="<%=UserListCtl.OP_SEARCH%>"> &nbsp; <input
-						type="submit" name="operation" value="<%=UserListCtl.OP_RESET%>">
-
-					</td>
+						value="<%=ServletUtility.getParameter("dob", request)%>"> --%> <input
+						type="submit" name="operation" value="<%=UserListCtl.OP_SEARCH%>">
+						&nbsp; <input type="submit" name="operation"
+						value="<%=UserListCtl.OP_RESET%>"></td>
 				</tr>
 			</table>
 			<br>

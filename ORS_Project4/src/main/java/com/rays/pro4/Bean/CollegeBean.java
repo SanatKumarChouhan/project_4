@@ -50,10 +50,20 @@ public class CollegeBean extends BaseBean{
 		// TODO Auto-generated method stub
 		return name;
 	}
+//	@Override
+//	public String getValue() {
+//		// TODO Auto-generated method stub
+//		return name;
+//	}
+	@Override
+	public String getValue(String val) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return name;
+		return null;
 	}
 	
 }

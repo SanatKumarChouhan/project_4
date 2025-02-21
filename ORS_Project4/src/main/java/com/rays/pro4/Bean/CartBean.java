@@ -44,6 +44,16 @@ public class CartBean extends BaseBean {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	/*
+	 * @Override public String getValue() { // TODO Auto-generated method stub
+	 * return null; }
+	 */
+	@Override
+	public String getValue(String val) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub

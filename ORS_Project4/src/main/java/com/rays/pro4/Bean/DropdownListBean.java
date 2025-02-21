@@ -12,6 +12,7 @@ public interface DropdownListBean {
 
 	public String getkey();
 
+	public String getValue(String val);
 	public String getValue();
 
 }

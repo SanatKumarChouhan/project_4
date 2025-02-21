@@ -48,6 +48,11 @@ public class SubjectBean extends BaseBean{
 		// TODO Auto-generated method stub
 		return subjectName;
 	}
+	@Override
+	public String getValue(String val) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	
